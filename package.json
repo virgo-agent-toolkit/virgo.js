@@ -1,0 +1,14 @@
+{
+  "name": "sample-virgo-agent-nodejs",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Ryan Phillips <ryan.phillips@rackspace.com>",
+  "license": "Apache-2",
+  "dependencies": {
+    "line-emitter": "*",
+    "async": "*",
+    "winston": "*",
+    "underscore": "*",
+    "sprintf": "*"
+  }
+}
