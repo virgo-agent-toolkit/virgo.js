@@ -3,17 +3,18 @@
 var Stream = require('../lib/stream').Stream;
 var fs = require('fs');
 var logmagic = require('logmagic');
+var log = logmagic.local('agent');
 
 logmagic.route('__root__', logmagic.DEBUG, 'console');
 
 
 function main() {
   // Parse Credentials
-  var creds = fs.readFileSync('creds.json');
+  var creds;
   try {
-    creds = JSON.parse(creds);
-  } catch (e) {
-    console.log(e.message);
+    creds = JSON.parse(fs.readFileSync('creds.json'));
+  } catch (err) {
+    log.error('Failed to load config', {'err': err.toString()});
     process.exit(1);
   }
   // Setup Options
