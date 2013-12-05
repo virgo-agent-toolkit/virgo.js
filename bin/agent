@@ -1,18 +1,11 @@
 #!/usr/bin/env node
 
 var Stream = require('../lib/stream').Stream;
-var winston = require('winston');
 var fs = require('fs');
+var logmagic = require('logmagic');
 
-// Setup Logger
+logmagic.route('__root__', logmagic.DEBUG, 'console');
 
-var logger = new (winston.Logger)({
-  transports: [
-    new (winston.transports.Console)()
-  ]
-});
-
-logger.setLevels(winston.config.syslog.levels);
 
 function main() {
   // Parse Credentials
@@ -20,7 +13,7 @@ function main() {
   try {
     creds = JSON.parse(creds);
   } catch (e) {
-    logger.error('Credential file failed to parse : ' + e.message);
+    console.log(e.message);
     process.exit(1);
   }
   // Setup Options
@@ -31,7 +24,6 @@ function main() {
       '_monitoringagent._tcp.ord1.prod.monitoring.api.rackspacecloud.com',
       '_monitoringagent._tcp.lon3.prod.monitoring.api.rackspacecloud.com'
     ],
-    log: logger,
     ca: [ fs.readFileSync('maas.cert') ],
     token: creds.token,
     agent_id: creds.agent_id,

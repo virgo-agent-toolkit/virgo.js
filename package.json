@@ -7,7 +7,7 @@
   "dependencies": {
     "line-emitter": "*",
     "async": "*",
-    "winston": "*",
+    "logmagic": "*",
     "underscore": "*",
     "sprintf": "*"
   }
