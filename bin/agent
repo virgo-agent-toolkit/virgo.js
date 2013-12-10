@@ -4,6 +4,7 @@ var Stream = require('../lib/stream').Stream;
 var fs = require('fs');
 var logmagic = require('logmagic');
 var log = logmagic.local('agent');
+var uuid = require('node-uuid');
 
 logmagic.route('__root__', logmagic.DEBUG, 'console');
 
@@ -28,7 +29,7 @@ function main() {
     ca: [ fs.readFileSync('maas.cert') ],
     token: creds.token,
     agent_id: creds.agent_id,
-    guid: '986783af-22ba-4fd0-8615-7b326c61153d',
+    guid: uuid.v4(),
     process_version: '0.1.2',
     bundle_version: '0.1.2'
   };

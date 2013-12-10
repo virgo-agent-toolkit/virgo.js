@@ -9,6 +9,7 @@
     "async": "*",
     "logmagic": "*",
     "underscore": "*",
-    "sprintf": "*"
+    "sprintf": "*",
+    "node-uuid": "*"
   }
 }
