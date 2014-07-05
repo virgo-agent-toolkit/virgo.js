@@ -1,15 +1,14 @@
 {
-  "name": "sample-virgo-agent-nodejs",
+  "name": "virgo.js",
   "version": "0.0.1",
-  "description": "",
-  "author": "Ryan Phillips <ryan.phillips@rackspace.com>",
+  "description": "Agent toolkit in node.js",
   "license": "Apache-2",
   "dependencies": {
-    "line-emitter": "*",
     "async": "*",
-    "logmagic": "*",
-    "underscore": "*",
-    "sprintf": "*",
-    "node-uuid": "*"
+    "through": "*",
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "tap": "*"
   }
 }
