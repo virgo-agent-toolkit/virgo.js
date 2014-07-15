@@ -3,13 +3,17 @@
   "version": "0.0.2",
   "description": "Agent toolkit in node.js",
   "license": "Apache-2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virgo-agent-toolkit/virgo.js.git"
+  },
   "dependencies": {
-    "async": "*",
-    "through": "*",
-    "underscore": "*"
+    "async": "~0.9.0",
+    "through": "~2.3.4",
+    "underscore": "~1.6.0",
+    "logmagic": "~0.1.4"
   },
   "devDependencies": {
-    "tap": "*",
-    "logmagic": "*"
+    "tap": "*"
   }
 }
