@@ -14,6 +14,6 @@
     "logmagic": "~0.1.4"
   },
   "devDependencies": {
-    "tap": "*"
+    "tape": "~2.13.3"
   }
 }
