@@ -3,8 +3,46 @@ Virgo.js
 
 Virgo.js is a library for creating [Virgo](http://virgo-agent-toolkit.github.io/) agents and agent endpoints in node.js.
 
-Example
-=======
+Setup Instructions
+==================
+
+Clone Virgo.js to obtain a local copy (you could also use the ssh url here). 
+
+    $ git clone https://github.com/virgo-agent-toolkit/virgo.js.git virgo-js
+
+Navigate to your new directory and install dependencies.
+
+    $ cd virgo-js
+    $ npm install
+
+Now, build virgo.js with make.
+
+    $ make
+
+Run the Example
+===============
+
+Next, run the heartbeats example, described in the following section.
+
+    $ sudo node examples/heartbeats-only.js
+
+In the output, you should expect a stream of heartbeat objects. 
+
+```json
+{
+  "v": "0.1.0",
+  "id": 42,
+  "target": "heartbeats",
+  "source": "Heartbeats",
+  "method": "heartbeat.post",
+  "params": {
+    "timestamp": 1408568615206
+  }
+}
+```
+
+Heartbeats Example in Detail
+============================
 
 The [Heartbeats Only](https://github.com/bravelittlescientist/virgo.js/blob/master/examples/heartbeats-only.js) example
 demonstrates how virgo.js is used. The purpose of this example is for the agent to send heartbeats to demonstrate that
