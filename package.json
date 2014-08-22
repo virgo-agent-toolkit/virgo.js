@@ -8,7 +8,7 @@
     "url": "https://github.com/virgo-agent-toolkit/virgo.js.git"
   },
   "scripts": {
-    "test": "node tests/*"
+    "test": "make && node tests/*"
   },
   "dependencies": {
     "async": "~0.9.0",
