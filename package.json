@@ -17,7 +17,6 @@
     "underscore": "~1.6.0"
   },
   "devDependencies": {
-    "tap": "*",
-    "tape": "^2.14.0"
+    "tape": "2.14.0"
   }
 }
