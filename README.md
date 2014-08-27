@@ -1,12 +1,16 @@
 [![Build Status](https://travis-ci.org/virgo-agent-toolkit/virgo.js.svg?branch=master)](https://travis-ci.org/virgo-agent-toolkit/virgo.js)
 
+[![NPM](https://nodei.co/npm/virgo.js.png)](https://nodei.co/npm/virgo.js)
+
 Virgo.js
 ========
 
 Virgo.js is a library for creating [Virgo](http://virgo-agent-toolkit.github.io/) agents and agent endpoints in node.js.
 
-Setup Instructions
-==================
+    var virgo = require('virgo.js');
+
+Development Setup Instructions
+==============================
 
 Clone Virgo.js to obtain a local copy (you could also use the ssh url here). 
 
