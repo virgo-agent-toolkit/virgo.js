@@ -5,7 +5,7 @@ var async = require('async');
 var agent = virgo.agent,
     endpoint = virgo.endpoint,
     heartbeats = virgo.heartbeats,
-    portOption = {"port": 8443};
+    endpointOption = {"host": 'localhost', "port": 8443};
 
 test('send and receive heartbeats test', function(t) {
   var hbCounter = -1,
@@ -15,10 +15,10 @@ test('send and receive heartbeats test', function(t) {
   tEndpoint = endpoint([heartbeats(function(hb) {
     hbCounter = hbCounter + 1;
     lastHb = hb;
-  })], portOption);
+  })], endpointOption);
   tEndpoint.run();
   
-  tAgent = agent([heartbeats()], portOption);
+  tAgent = agent([heartbeats()], endpointOption);
   tAgent.run();
 
   async.series([
@@ -46,10 +46,10 @@ test('shutdown heartbeats test', function(t) {
   
   tEndpoint = endpoint([heartbeats(function(hb) {
     process.stdout.write(hb);
-  })], portOption);
+  })], endpointOption);
   tEndpoint.run();
   
-  tAgent = agent([heartbeats()], portOption);
+  tAgent = agent([heartbeats()], endpointOption);
   tAgent.run();
 
   async.series([
