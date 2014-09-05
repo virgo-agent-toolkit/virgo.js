@@ -1,6 +1,6 @@
 {
   "name": "virgo.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Agent toolkit in node.js",
   "license": "Apache-2",
   "repository": {
