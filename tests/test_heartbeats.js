@@ -45,7 +45,7 @@ test('shutdown heartbeats test', function(t) {
   var tEndpoint, tAgent;
   
   tEndpoint = endpoint([heartbeats(function(hb) {
-    process.stdout.write(hb);
+    process.stdout.write(JSON.stringify(hb));
   })], endpointOption);
   tEndpoint.run();
   
