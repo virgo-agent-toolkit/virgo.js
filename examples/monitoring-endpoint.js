@@ -4,7 +4,7 @@ logmagic.route('__root__', logmagic.DEBUG, "console");
 
 var virgo = require('..');
 
-// Hello, world example feature
+// Monitoring example feature
 var monitoring = require('./monitoring-feature');
 
 // Create agent and endpoint
